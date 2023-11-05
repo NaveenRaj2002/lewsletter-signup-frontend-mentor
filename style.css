@@ -1,0 +1,258 @@
+:root {
+  --primary-bg: hsl(235, 18%, 26%);
+  --h1-heading-btnBG: hsl(234, 29%, 20%);
+  --placeholder-color: hsl(231, 7%, 60%);
+  --newsletter-bg: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  background-color: var(--primary-bg);
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  color: var(--h1-heading-btnBG);
+}
+
+.section-newsletter {
+  max-width: 144rem;
+}
+
+.container {
+  max-width: 70rem;
+  background-color: var(--newsletter-bg);
+  padding: 1.6rem;
+  border-radius: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.newsletter-details {
+  padding: 4.8rem 2.4rem;
+}
+
+.heading-primary {
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+.para-primary {
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin-bottom: 1.6rem;
+  line-height: 1.6;
+}
+
+.details-container {
+  margin-bottom: 3rem;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.details img {
+  height: 1.3rem;
+}
+
+.details p {
+  font-size: 1.2rem;
+}
+
+.input-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.input-labels p:last-child {
+  margin-right: 1.6rem;
+  color: red;
+}
+
+.error {
+  display: none;
+}
+
+.show-error {
+  display: block;
+}
+
+.input-box {
+  display: inline-block;
+  width: 94%;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  border: none;
+  box-shadow: 0 0 0 0.1rem var(--placeholder-color);
+  margin-bottom: 1.6rem;
+}
+
+.input-error {
+  color: red;
+  box-shadow: 0 0 0 0.1rem red;
+  background-color: rgba(255, 0, 0, 0.18);
+}
+
+.input-box::placeholder {
+  color: var(--placeholder-color);
+}
+
+.btn {
+  width: 94%;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--newsletter-bg);
+  background-color: var(--h1-heading-btnBG);
+  padding: 1.2rem 3rem;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgba(255, 97, 85);
+}
+
+.newsletter-img {
+  background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+}
+
+/* SUCCESSFULL SUBSCRIPTION */
+
+.succ {
+  max-width: 50rem;
+  padding: 6.4rem;
+  grid-template-columns: 1fr;
+}
+
+.success img {
+  height: 6rem;
+  margin-bottom: 3rem;
+}
+
+.succ-h1 {
+  font-size: 4.4rem;
+  margin-bottom: 2rem;
+}
+
+.success-para {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 3rem;
+}
+
+.success-para span {
+  color: var(--h1-heading-btnBG);
+  font-weight: 700;
+}
+
+.btn-succ {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 38em) {
+  html {
+    font-size: 69%;
+  }
+
+  body {
+    display: block;
+  }
+
+  .container {
+    padding: 0;
+    height: 100vh;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-img {
+    grid-row: 1;
+    background-image: url(./assets/images/illustration-sign-up-mobile.svg);
+    min-height: 20rem;
+    border-radius: 0 0 2rem 2rem;
+  }
+
+  .newsletter-details {
+    padding: 4rem 3rem;
+  }
+
+  .para-primary {
+    font-size: 1.6rem;
+  }
+
+  .details {
+    align-items: normal;
+  }
+
+  .details img {
+    height: 1.6rem;
+  }
+
+  .btn {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    letter-spacing: 0.08rem;
+    font-weight: 700;
+  }
+
+  /* SUCCESSFULL */
+  .succ {
+    place-content: start;
+    padding: 4rem;
+    position: relative;
+  }
+
+  .success {
+    margin-top: 15rem;
+  }
+
+  .success form {
+    display: inline-block;
+    position: absolute;
+    width: 70%;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/*
+- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
